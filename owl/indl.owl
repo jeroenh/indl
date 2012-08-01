@@ -73,26 +73,26 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#VirtualNode"/>
-        <Class IRI="http://http://schemas.ogf.org/nml/base#Node"/>
+        <Class abbreviatedIRI="nml:#Node"/>
     </SubClassOf>
     <InverseObjectProperties>
         <ObjectProperty IRI="#implements"/>
-        <ObjectProperty IRI="http://http://schemas.ogf.org/nml/base#implementedBy"/>
+        <ObjectProperty abbreviatedIRI="nml:#implementedBy"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#hasComponent"/>
         <ObjectProperty IRI="#partOf"/>
+        <ObjectProperty IRI="#hasComponent"/>
     </InverseObjectProperties>
     <InverseFunctionalObjectProperty>
         <ObjectProperty IRI="#partOf"/>
     </InverseFunctionalObjectProperty>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasComponent"/>
-        <Class IRI="http://http://schemas.ogf.org/nml/base#Node"/>
+        <Class abbreviatedIRI="nml:#Node"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#implements"/>
-        <Class IRI="http://http://schemas.ogf.org/nml/base#Node"/>
+        <Class abbreviatedIRI="nml:#Node"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#partOf"/>
@@ -108,7 +108,7 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#partOf"/>
-        <Class IRI="http://http://schemas.ogf.org/nml/base#Node"/>
+        <Class abbreviatedIRI="nml:#Node"/>
     </ObjectPropertyRange>
     <DataPropertyDomain>
         <DataProperty IRI="#cores"/>
