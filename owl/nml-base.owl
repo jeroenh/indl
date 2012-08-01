@@ -1,0 +1,591 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://schemas.ogf.org/nml/base/2013/02/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://schemas.ogf.org/nml/base/2013/02/">
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#AdaptationService"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#BidirectionalLink"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#BidirectionalPort"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#DeadaptationService"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#Group"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#Label"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#LabelGroup"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#Lifetime"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#Link"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#LinkGroup"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#List"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#Location"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#NetworkObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#Node"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#Port"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#PortGroup"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#Service"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#SwitchingService"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#Topology"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://http://schemas.ogf.org/nml/base#existsDuring"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://http://schemas.ogf.org/nml/base#hasInboundPort"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://http://schemas.ogf.org/nml/base#hasLabel"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://http://schemas.ogf.org/nml/base#hasLabelGroup"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://http://schemas.ogf.org/nml/base#hasLink"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://http://schemas.ogf.org/nml/base#hasNode"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://http://schemas.ogf.org/nml/base#hasOutboundPort"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://http://schemas.ogf.org/nml/base#hasPort"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://http://schemas.ogf.org/nml/base#hasService"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://http://schemas.ogf.org/nml/base#hasSink"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://http://schemas.ogf.org/nml/base#hasSource"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://http://schemas.ogf.org/nml/base#hasTopology"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://http://schemas.ogf.org/nml/base#implementedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://http://schemas.ogf.org/nml/base#isAlias"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://http://schemas.ogf.org/nml/base#isSerialCompoundLink"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://http://schemas.ogf.org/nml/base#isSink"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://http://schemas.ogf.org/nml/base#isSource"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://http://schemas.ogf.org/nml/base#locatedAt"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://http://schemas.ogf.org/nml/base#providesLink"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://http://schemas.ogf.org/nml/base#providesPort"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://http://schemas.ogf.org/nml/base#adaptationfunction"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://http://schemas.ogf.org/nml/base#address"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://http://schemas.ogf.org/nml/base#alt"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://http://schemas.ogf.org/nml/base#encoding"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://http://schemas.ogf.org/nml/base#endtime"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://http://schemas.ogf.org/nml/base#labeltype"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://http://schemas.ogf.org/nml/base#labelvalue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://http://schemas.ogf.org/nml/base#labelvalues"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://http://schemas.ogf.org/nml/base#lat"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://http://schemas.ogf.org/nml/base#long"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://http://schemas.ogf.org/nml/base#name"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://http://schemas.ogf.org/nml/base#starttime"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://http://schemas.ogf.org/nml/base#time"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://http://schemas.ogf.org/nml/base#unlocode"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://http://schemas.ogf.org/nml/base#version"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#AdaptationService"/>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#Service"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#BidirectionalLink"/>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#Group"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#BidirectionalPort"/>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#Group"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#DeadaptationService"/>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#Service"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#Group"/>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#NetworkObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#LabelGroup"/>
+        <Class abbreviatedIRI=":Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#Link"/>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#NetworkObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#LinkGroup"/>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#Group"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#Location"/>
+        <Class abbreviatedIRI=":Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#Node"/>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#NetworkObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#Port"/>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#NetworkObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#PortGroup"/>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#Group"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#Service"/>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#NetworkObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#SwitchingService"/>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#Service"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#Topology"/>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#Group"/>
+    </SubClassOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://http://schemas.ogf.org/nml/base#hasInboundPort"/>
+        <ObjectProperty abbreviatedIRI=":topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://http://schemas.ogf.org/nml/base#existsDuring"/>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#NetworkObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://http://schemas.ogf.org/nml/base#hasInboundPort"/>
+        <ObjectUnionOf>
+            <Class IRI="http://http://schemas.ogf.org/nml/base#Node"/>
+            <Class IRI="http://http://schemas.ogf.org/nml/base#SwitchingService"/>
+            <Class IRI="http://http://schemas.ogf.org/nml/base#Topology"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://http://schemas.ogf.org/nml/base#hasLabel"/>
+        <ObjectUnionOf>
+            <Class IRI="http://http://schemas.ogf.org/nml/base#Link"/>
+            <Class IRI="http://http://schemas.ogf.org/nml/base#Port"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://http://schemas.ogf.org/nml/base#hasLabelGroup"/>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#PortGroup"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://http://schemas.ogf.org/nml/base#hasLink"/>
+        <ObjectUnionOf>
+            <Class IRI="http://http://schemas.ogf.org/nml/base#BidirectionalLink"/>
+            <Class IRI="http://http://schemas.ogf.org/nml/base#LinkGroup"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://http://schemas.ogf.org/nml/base#hasNode"/>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#Topology"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://http://schemas.ogf.org/nml/base#hasOutboundPort"/>
+        <ObjectUnionOf>
+            <Class IRI="http://http://schemas.ogf.org/nml/base#Node"/>
+            <Class IRI="http://http://schemas.ogf.org/nml/base#SwitchingService"/>
+            <Class IRI="http://http://schemas.ogf.org/nml/base#Topology"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://http://schemas.ogf.org/nml/base#hasPort"/>
+        <ObjectUnionOf>
+            <Class IRI="http://http://schemas.ogf.org/nml/base#BidirectionalPort"/>
+            <Class IRI="http://http://schemas.ogf.org/nml/base#PortGroup"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://http://schemas.ogf.org/nml/base#hasService"/>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#NetworkObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://http://schemas.ogf.org/nml/base#hasSink"/>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#Link"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://http://schemas.ogf.org/nml/base#hasSource"/>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#Link"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://http://schemas.ogf.org/nml/base#hasTopology"/>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#Topology"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://http://schemas.ogf.org/nml/base#implementedBy"/>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#Node"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://http://schemas.ogf.org/nml/base#isAlias"/>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#NetworkObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://http://schemas.ogf.org/nml/base#isSerialCompoundLink"/>
+        <ObjectUnionOf>
+            <Class IRI="http://http://schemas.ogf.org/nml/base#Link"/>
+            <Class IRI="http://http://schemas.ogf.org/nml/base#LinkGroup"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://http://schemas.ogf.org/nml/base#isSink"/>
+        <ObjectUnionOf>
+            <Class IRI="http://http://schemas.ogf.org/nml/base#Port"/>
+            <Class IRI="http://http://schemas.ogf.org/nml/base#PortGroup"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://http://schemas.ogf.org/nml/base#isSource"/>
+        <ObjectUnionOf>
+            <Class IRI="http://http://schemas.ogf.org/nml/base#Port"/>
+            <Class IRI="http://http://schemas.ogf.org/nml/base#PortGroup"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://http://schemas.ogf.org/nml/base#locatedAt"/>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#Node"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://http://schemas.ogf.org/nml/base#providesLink"/>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#SwitchingService"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://http://schemas.ogf.org/nml/base#providesPort"/>
+        <ObjectUnionOf>
+            <Class IRI="http://http://schemas.ogf.org/nml/base#AdaptationService"/>
+            <Class IRI="http://http://schemas.ogf.org/nml/base#DeadaptationService"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://http://schemas.ogf.org/nml/base#existsDuring"/>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#Lifetime"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://http://schemas.ogf.org/nml/base#hasInboundPort"/>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#Port"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://http://schemas.ogf.org/nml/base#hasLabel"/>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#Label"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://http://schemas.ogf.org/nml/base#hasLabelGroup"/>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#LabelGroup"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://http://schemas.ogf.org/nml/base#hasLink"/>
+        <ObjectUnionOf>
+            <Class IRI="http://http://schemas.ogf.org/nml/base#Link"/>
+            <Class IRI="http://http://schemas.ogf.org/nml/base#LinkGroup"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://http://schemas.ogf.org/nml/base#hasNode"/>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#Node"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://http://schemas.ogf.org/nml/base#hasOutboundPort"/>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#Port"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://http://schemas.ogf.org/nml/base#hasPort"/>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#Port"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://http://schemas.ogf.org/nml/base#hasService"/>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#Service"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://http://schemas.ogf.org/nml/base#hasSink"/>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#Port"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://http://schemas.ogf.org/nml/base#hasSource"/>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#Port"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://http://schemas.ogf.org/nml/base#hasTopology"/>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#Topology"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://http://schemas.ogf.org/nml/base#implementedBy"/>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#Node"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://http://schemas.ogf.org/nml/base#isAlias"/>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#NetworkObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://http://schemas.ogf.org/nml/base#isSerialCompoundLink"/>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#List"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://http://schemas.ogf.org/nml/base#isSink"/>
+        <ObjectUnionOf>
+            <Class IRI="http://http://schemas.ogf.org/nml/base#Link"/>
+            <Class IRI="http://http://schemas.ogf.org/nml/base#LinkGroup"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://http://schemas.ogf.org/nml/base#isSource"/>
+        <ObjectUnionOf>
+            <Class IRI="http://http://schemas.ogf.org/nml/base#Link"/>
+            <Class IRI="http://http://schemas.ogf.org/nml/base#LinkGroup"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://http://schemas.ogf.org/nml/base#locatedAt"/>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#Location"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://http://schemas.ogf.org/nml/base#providesLink"/>
+        <ObjectUnionOf>
+            <Class IRI="http://http://schemas.ogf.org/nml/base#Link"/>
+            <Class IRI="http://http://schemas.ogf.org/nml/base#LinkGroup"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://http://schemas.ogf.org/nml/base#providesPort"/>
+        <ObjectUnionOf>
+            <Class IRI="http://http://schemas.ogf.org/nml/base#Port"/>
+            <Class IRI="http://http://schemas.ogf.org/nml/base#PortGroup"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://http://schemas.ogf.org/nml/base#adaptationfunction"/>
+        <ObjectUnionOf>
+            <Class IRI="http://http://schemas.ogf.org/nml/base#AdaptationService"/>
+            <Class IRI="http://http://schemas.ogf.org/nml/base#DeadaptationService"/>
+        </ObjectUnionOf>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://http://schemas.ogf.org/nml/base#address"/>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#Location"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://http://schemas.ogf.org/nml/base#alt"/>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#Location"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://http://schemas.ogf.org/nml/base#encoding"/>
+        <ObjectUnionOf>
+            <Class IRI="http://http://schemas.ogf.org/nml/base#Port"/>
+            <Class IRI="http://http://schemas.ogf.org/nml/base#PortGroup"/>
+        </ObjectUnionOf>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://http://schemas.ogf.org/nml/base#endtime"/>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#Lifetime"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://http://schemas.ogf.org/nml/base#labeltype"/>
+        <ObjectUnionOf>
+            <Class IRI="http://http://schemas.ogf.org/nml/base#Label"/>
+            <Class IRI="http://http://schemas.ogf.org/nml/base#LabelGroup"/>
+        </ObjectUnionOf>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://http://schemas.ogf.org/nml/base#labelvalue"/>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#Label"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://http://schemas.ogf.org/nml/base#labelvalues"/>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#LabelGroup"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://http://schemas.ogf.org/nml/base#lat"/>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#Location"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://http://schemas.ogf.org/nml/base#long"/>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#Location"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://http://schemas.ogf.org/nml/base#name"/>
+        <ObjectUnionOf>
+            <Class IRI="http://http://schemas.ogf.org/nml/base#Location"/>
+            <Class IRI="http://http://schemas.ogf.org/nml/base#NetworkObject"/>
+        </ObjectUnionOf>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://http://schemas.ogf.org/nml/base#starttime"/>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#Lifetime"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://http://schemas.ogf.org/nml/base#time"/>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#Lifetime"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://http://schemas.ogf.org/nml/base#unlocode"/>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#Location"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://http://schemas.ogf.org/nml/base#version"/>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#Topology"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="http://http://schemas.ogf.org/nml/base#adaptationfunction"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://http://schemas.ogf.org/nml/base#address"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://http://schemas.ogf.org/nml/base#alt"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://http://schemas.ogf.org/nml/base#encoding"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://http://schemas.ogf.org/nml/base#endtime"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://http://schemas.ogf.org/nml/base#labeltype"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://http://schemas.ogf.org/nml/base#labelvalue"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://http://schemas.ogf.org/nml/base#labelvalues"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://http://schemas.ogf.org/nml/base#lat"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://http://schemas.ogf.org/nml/base#long"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://http://schemas.ogf.org/nml/base#name"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://http://schemas.ogf.org/nml/base#starttime"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://http://schemas.ogf.org/nml/base#time"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://http://schemas.ogf.org/nml/base#unlocode"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://http://schemas.ogf.org/nml/base#version"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.1.0.20069) http://owlapi.sourceforge.net -->
+

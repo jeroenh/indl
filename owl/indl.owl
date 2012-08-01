@@ -1,0 +1,173 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.science.uva.nl/research/sne/indl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://www.science.uva.nl/research/sne/indl">
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="nml" IRI="http://schemas.ogf.org/nml/base"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://schemas.ogf.org/nml/base/2013/02/</Import>
+    <Declaration>
+        <Class IRI="#MemoryComponent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NodeComponent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ProcessingComponent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#StorageComponent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#VirtualNode"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasComponent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#implements"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#partOf"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#cores"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#cpuarch"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#cpuspeed"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#size"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#MemoryComponent"/>
+        <Class IRI="#NodeComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ProcessingComponent"/>
+        <Class IRI="#NodeComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#StorageComponent"/>
+        <Class IRI="#NodeComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#VirtualNode"/>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#Node"/>
+    </SubClassOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#implements"/>
+        <ObjectProperty IRI="http://http://schemas.ogf.org/nml/base#implementedBy"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasComponent"/>
+        <ObjectProperty IRI="#partOf"/>
+    </InverseObjectProperties>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="#partOf"/>
+    </InverseFunctionalObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasComponent"/>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#Node"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#implements"/>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#Node"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#partOf"/>
+        <Class IRI="#NodeComponent"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasComponent"/>
+        <Class IRI="#NodeComponent"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#implements"/>
+        <Class IRI="#VirtualNode"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#partOf"/>
+        <Class IRI="http://http://schemas.ogf.org/nml/base#Node"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#cores"/>
+        <Class IRI="#ProcessingComponent"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#cpuarch"/>
+        <Class IRI="#ProcessingComponent"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#cpuspeed"/>
+        <Class IRI="#ProcessingComponent"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#size"/>
+        <ObjectUnionOf>
+            <Class IRI="#MemoryComponent"/>
+            <Class IRI="#StorageComponent"/>
+        </ObjectUnionOf>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#cores"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#cpuarch"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#cpuspeed"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#size"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#cores</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">the number of cores on a CPU</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#cpuarch</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">cpu architecture</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#cpuspeed</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">the speed per core in GHz</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#size</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">size of storage or memory in GB</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.1.0.20069) http://owlapi.sourceforge.net -->
+
