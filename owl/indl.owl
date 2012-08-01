@@ -73,11 +73,11 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#VirtualNode"/>
-        <Class abbreviatedIRI="nml:#Node"/>
+        <Class abbreviatedIRI="nml:/2013/02#Node"/>
     </SubClassOf>
     <InverseObjectProperties>
+        <ObjectProperty abbreviatedIRI="nml:/2013/02#implementedBy"/>
         <ObjectProperty IRI="#implements"/>
-        <ObjectProperty abbreviatedIRI="nml:#implementedBy"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#partOf"/>
@@ -88,11 +88,11 @@
     </InverseFunctionalObjectProperty>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasComponent"/>
-        <Class abbreviatedIRI="nml:#Node"/>
+        <Class abbreviatedIRI="nml:/2013/02#Node"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#implements"/>
-        <Class abbreviatedIRI="nml:#Node"/>
+        <Class abbreviatedIRI="nml:/2013/02#Node"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#partOf"/>
@@ -108,7 +108,7 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#partOf"/>
-        <Class abbreviatedIRI="nml:#Node"/>
+        <Class abbreviatedIRI="nml:/2013/02#Node"/>
     </ObjectPropertyRange>
     <DataPropertyDomain>
         <DataProperty IRI="#cores"/>
