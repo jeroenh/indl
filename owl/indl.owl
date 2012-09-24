@@ -1,171 +1,200 @@
 <?xml version="1.0"?>
 
 
-<!DOCTYPE Ontology [
+<!DOCTYPE rdf:RDF [
+    <!ENTITY nml "http://schemas.ogf.org/nml/base/2013/02" >
+    <!ENTITY base "http://schemas.ogf.org/nml/base/2013/02#" >
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
-    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY indl "http://www.science.uva.nl/research/sne/indl#" >
 ]>
 
 
-<Ontology xmlns="http://www.w3.org/2002/07/owl#"
-     xml:base="http://www.science.uva.nl/research/sne/indl"
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:indl="http://www.science.uva.nl/research/sne/indl#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:nml="http://schemas.ogf.org/nml/base/2013/02#"
+     xmlns:base="http://schemas.ogf.org/nml/base/2013/02#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     ontologyIRI="http://www.science.uva.nl/research/sne/indl">
-    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
-    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
-    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
-    <Prefix name="nml" IRI="http://schemas.ogf.org/nml/base"/>
-    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
-    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
-    <Import>http://schemas.ogf.org/nml/base/2013/02/</Import>
-    <Declaration>
-        <Class IRI="#MemoryComponent"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#NodeComponent"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#ProcessingComponent"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#StorageComponent"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#VirtualNode"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasComponent"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#implements"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#partOf"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#cores"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#cpuarch"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#cpuspeed"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#size"/>
-    </Declaration>
-    <SubClassOf>
-        <Class IRI="#MemoryComponent"/>
-        <Class IRI="#NodeComponent"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#ProcessingComponent"/>
-        <Class IRI="#NodeComponent"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#StorageComponent"/>
-        <Class IRI="#NodeComponent"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#VirtualNode"/>
-        <Class abbreviatedIRI="nml:/2013/02#Node"/>
-    </SubClassOf>
-    <InverseObjectProperties>
-        <ObjectProperty abbreviatedIRI="nml:/2013/02#implementedBy"/>
-        <ObjectProperty IRI="#implements"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="#partOf"/>
-        <ObjectProperty IRI="#hasComponent"/>
-    </InverseObjectProperties>
-    <InverseFunctionalObjectProperty>
-        <ObjectProperty IRI="#partOf"/>
-    </InverseFunctionalObjectProperty>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasComponent"/>
-        <Class abbreviatedIRI="nml:/2013/02#Node"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#implements"/>
-        <Class abbreviatedIRI="nml:/2013/02#Node"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#partOf"/>
-        <Class IRI="#NodeComponent"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasComponent"/>
-        <Class IRI="#NodeComponent"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#implements"/>
-        <Class IRI="#VirtualNode"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#partOf"/>
-        <Class abbreviatedIRI="nml:/2013/02#Node"/>
-    </ObjectPropertyRange>
-    <DataPropertyDomain>
-        <DataProperty IRI="#cores"/>
-        <Class IRI="#ProcessingComponent"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#cpuarch"/>
-        <Class IRI="#ProcessingComponent"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#cpuspeed"/>
-        <Class IRI="#ProcessingComponent"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#size"/>
-        <ObjectUnionOf>
-            <Class IRI="#MemoryComponent"/>
-            <Class IRI="#StorageComponent"/>
-        </ObjectUnionOf>
-    </DataPropertyDomain>
-    <DataPropertyRange>
-        <DataProperty IRI="#cores"/>
-        <Datatype abbreviatedIRI="xsd:int"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#cpuarch"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#cpuspeed"/>
-        <Datatype abbreviatedIRI="xsd:float"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#size"/>
-        <Datatype abbreviatedIRI="xsd:float"/>
-    </DataPropertyRange>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#cores</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">the number of cores on a CPU</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#cpuarch</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">cpu architecture</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#cpuspeed</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">the speed per core in GHz</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#size</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">size of storage or memory in GB</Literal>
-    </AnnotationAssertion>
-</Ontology>
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <Ontology rdf:about="http://www.science.uva.nl/research/sne/indl">
+        <imports rdf:resource="file:nml-base.owl"/>
+    </Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <AnnotationProperty rdf:about="&rdfs;comment"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://schemas.ogf.org/nml/base#implementedBy -->
+
+    <ObjectProperty rdf:about="&nml;#implementedBy"/>
+    
+
+
+    <!-- http://www.science.uva.nl/research/sne/indl#hasComponent -->
+
+    <ObjectProperty rdf:about="&indl;hasComponent">
+        <rdfs:domain rdf:resource="&nml;#Node"/>
+        <rdfs:range rdf:resource="&indl;NodeComponent"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.science.uva.nl/research/sne/indl#implements -->
+
+    <ObjectProperty rdf:about="&indl;implements">
+        <rdfs:domain rdf:resource="&nml;#Node"/>
+        <inverseOf rdf:resource="&nml;#implementedBy"/>
+        <rdfs:range rdf:resource="&indl;VirtualNode"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.science.uva.nl/research/sne/indl#partOf -->
+
+    <ObjectProperty rdf:about="&indl;partOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:range rdf:resource="&nml;#Node"/>
+        <rdfs:domain rdf:resource="&indl;NodeComponent"/>
+        <inverseOf rdf:resource="&indl;hasComponent"/>
+    </ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.science.uva.nl/research/sne/indl#cores -->
+
+    <DatatypeProperty rdf:about="&indl;cores">
+        <rdfs:comment>the number of cores on a CPU</rdfs:comment>
+        <rdfs:domain rdf:resource="&indl;ProcessingComponent"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.science.uva.nl/research/sne/indl#cpuarch -->
+
+    <DatatypeProperty rdf:about="&indl;cpuarch">
+        <rdfs:comment>cpu architecture</rdfs:comment>
+        <rdfs:domain rdf:resource="&indl;ProcessingComponent"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.science.uva.nl/research/sne/indl#cpuspeed -->
+
+    <DatatypeProperty rdf:about="&indl;cpuspeed">
+        <rdfs:comment>the speed per core in GHz</rdfs:comment>
+        <rdfs:domain rdf:resource="&indl;ProcessingComponent"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.science.uva.nl/research/sne/indl#size -->
+
+    <DatatypeProperty rdf:about="&indl;size">
+        <rdfs:comment>size of storage or memory in GB</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;float"/>
+        <rdfs:domain>
+            <Class>
+                <unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&indl;MemoryComponent"/>
+                    <rdf:Description rdf:about="&indl;StorageComponent"/>
+                </unionOf>
+            </Class>
+        </rdfs:domain>
+    </DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://schemas.ogf.org/nml/base#Node -->
+
+    <Class rdf:about="&nml;#Node"/>
+    
+
+
+    <!-- http://www.science.uva.nl/research/sne/indl#MemoryComponent -->
+
+    <Class rdf:about="&indl;MemoryComponent">
+        <rdfs:subClassOf rdf:resource="&indl;NodeComponent"/>
+    </Class>
+    
+
+
+    <!-- http://www.science.uva.nl/research/sne/indl#NodeComponent -->
+
+    <Class rdf:about="&indl;NodeComponent"/>
+    
+
+
+    <!-- http://www.science.uva.nl/research/sne/indl#ProcessingComponent -->
+
+    <Class rdf:about="&indl;ProcessingComponent">
+        <rdfs:subClassOf rdf:resource="&indl;NodeComponent"/>
+    </Class>
+    
+
+
+    <!-- http://www.science.uva.nl/research/sne/indl#StorageComponent -->
+
+    <Class rdf:about="&indl;StorageComponent">
+        <rdfs:subClassOf rdf:resource="&indl;NodeComponent"/>
+    </Class>
+    
+
+
+    <!-- http://www.science.uva.nl/research/sne/indl#VirtualNode -->
+
+    <Class rdf:about="&indl;VirtualNode">
+        <rdfs:subClassOf rdf:resource="&nml;#Node"/>
+    </Class>
+</rdf:RDF>
 
 
 
